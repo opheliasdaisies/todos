@@ -6,11 +6,11 @@
 
 require "Date"
 
-puts "What is your birthday?"
+puts "What is your birthday? Enter in numbers, separated by a dash. ie. 11-14."
 birthday = gets.chomp
 today = Date.today.to_s
 puts today[5..today.length]
-if birthday == today.split[5..today.length]
+if birthday == today[5..today.length]
 	puts "Happy Birthday! Hope you're not feeling too old yet."
 else
 	puts "Oh, it's not your birthday. No cake for you!"
