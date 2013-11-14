@@ -6,7 +6,7 @@
 
 require "Date"
 
-puts "What is your birthday? Enter in numbers, separated by a dash. ie. 11-14."
+puts "What is your birthday? Enter in MM-DD format. ie. 11-14."
 birthday = gets.chomp
 today = Date.today.to_s
 
