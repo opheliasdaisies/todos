@@ -3,20 +3,32 @@
 # 1. sort the following array in ascending order
 #   ["blake", "ashley", "scott"]
 array = ["blake", "ashley", "scott"]
-puts array.sort
+p array.sort
 
 # 2. sort the following array in descending order
 #   ["blake", "ashley", "scott"]
+p array.sort.reverse
+
 # 3. put the following array in reverse order
 #   ["blake", "ashley", "scott"]
+p array.reverse
+
 # 4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
+p array[1]
+
 # 5. print each element of the array to the console
 #   ["blake", "ashley", "scott"]
+array.each do |name|
+  puts name
+end
+
 # 6. create a new array in the following order
 #   ["blake", "ashley", "scott"] 
 #   should transform into
 #   ["blake", "scott", "ashley"]
+
+
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
