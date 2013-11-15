@@ -67,10 +67,32 @@ puts winners
 
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
+num_group1 = [1,2,3]
+num_group2 = [5,9,4]
+p num_group1 + num_group2
+
+
 # 11. find all words that begin with "a" in the following array
 #   ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
+things = ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
+a = []
+things.each do |item|
+  if item[0] == "a"
+    a << item
+  end
+end
+p a
+
 # 11. sum all the numbers in the following array
 #   [11,4,7,8,9,100,134]
+to_be_summed = [11,4,7,8,9,100,134]
+sum = 0
+to_be_summed.each do |num|
+  sum += num
+end
+p sum
+
+
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
 #   ["hand","feet", "knee", "table"]
 # CHALLENGE
