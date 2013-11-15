@@ -95,6 +95,14 @@ p sum
 
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
 #   ["hand","feet", "knee", "table"]
+pluralize = ["hand","feet", "knee", "table"]
+pluralize.map do |item|
+  unless item == pluralize[1]
+    item[item.length] = "s"
+  end
+end
+p pluralize
+
 # CHALLENGE
  
 # word count
