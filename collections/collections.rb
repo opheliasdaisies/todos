@@ -27,10 +27,20 @@ end
 #   ["blake", "ashley", "scott"] 
 #   should transform into
 #   ["blake", "scott", "ashley"]
-
+array2 = array
+ashley = array2.pop
+array2.insert(1, ashley)
+puts array2
 
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
+hash = {}
+array.collect do |name|
+  hash[name] = (name)
+  hash[name][3] = "$"
+end
+puts hash
+
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
 # 9. find all the winners and put them in an array
