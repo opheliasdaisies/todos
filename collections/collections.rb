@@ -3,19 +3,19 @@
 # 1. sort the following array in ascending order
 #   ["blake", "ashley", "scott"]
 array = ["blake", "ashley", "scott"]
-p array.sort
+array.sort
 
 # 2. sort the following array in descending order
 #   ["blake", "ashley", "scott"]
-p array.sort.reverse
+array.sort.reverse
 
 # 3. put the following array in reverse order
 #   ["blake", "ashley", "scott"]
-p array.reverse
+array.reverse
 
 # 4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
-p array[1]
+array[1]
 
 # 5. print each element of the array to the console
 #   ["blake", "ashley", "scott"]
@@ -30,7 +30,6 @@ end
 array2 = array
 ashley = array2.pop
 array2.insert(1, ashley)
-puts array2
 
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
@@ -39,7 +38,7 @@ array.collect do |name|
   hash[name] = (name)
   hash[name][2] = "$"
 end
-puts hash
+hash
 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
@@ -52,7 +51,7 @@ array3.each do |num|
     hash2["greater_than_10"] << num
   end
 end
-puts hash2
+hash2
 
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
@@ -63,13 +62,13 @@ competitors.each do |person, status|
     winners << person
   end
 end
-puts winners
+winners
 
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
 num_group1 = [1,2,3]
 num_group2 = [5,9,4]
-p num_group1 + num_group2
+num_group1 + num_group2
 
 
 # 11. find all words that begin with "a" in the following array
@@ -81,7 +80,7 @@ things.each do |item|
     a << item
   end
 end
-p a
+a
 
 # 11. sum all the numbers in the following array
 #   [11,4,7,8,9,100,134]
@@ -90,7 +89,7 @@ sum = 0
 to_be_summed.each do |num|
   sum += num
 end
-p sum
+sum
 
 
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
@@ -101,7 +100,7 @@ pluralize.map do |item|
     item[item.length] = "s"
   end
 end
-p pluralize
+pluralize
 
 # CHALLENGE
  
