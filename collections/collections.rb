@@ -43,7 +43,16 @@ puts hash
 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
-
+array3 = [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
+hash2 = {"greater_than_10" => [], "less_than_10" => []}
+array3.each do |num|
+  if num < 10
+    hash2["less_than_10"] << num
+  else
+    hash2["greater_than_10"] << num
+  end
+end
+puts hash2
 
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
