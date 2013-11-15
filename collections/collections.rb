@@ -37,12 +37,14 @@ puts array2
 hash = {}
 array.collect do |name|
   hash[name] = (name)
-  hash[name][3] = "$"
+  hash[name][2] = "$"
 end
 puts hash
 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
+
+
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
 # 10. add the following arrays
