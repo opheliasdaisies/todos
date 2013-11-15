@@ -20,10 +20,17 @@ end
 
 def play(response)
 	if response.downcase == "yes"
-
+		shake
 	else
 		puts "Okay, no fortune for you."
 	end
 end
+	
+def shake
+	puts "Okay, let's shake the eight ball. Your response is:"
+	
+end
+
+fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
 
 eightball
