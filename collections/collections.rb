@@ -56,6 +56,15 @@ puts hash2
 
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
+competitors = {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
+winners = []
+competitors.each do |person, status|
+  if status == "winner"
+    winners << person
+  end
+end
+puts winners
+
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
 # 11. find all words that begin with "a" in the following array
