@@ -43,6 +43,6 @@ def play_again(options)
 	play(play_again, options)
 end
 
-fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
+fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!", "It looks lovley!"]
 
 eightball(fortune)

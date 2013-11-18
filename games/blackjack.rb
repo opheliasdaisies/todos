@@ -31,9 +31,9 @@ end
 
 def game
 	hand = 0
-	deal(hand)
-	deal(hand)
-	puts "You're hand is currently equal to #{hand}."
+	hand = deal(hand)
+	hand = deal(hand)
+	puts "Your hand is currently equal to #{hand}."
 end
 
 def deal(hand)
