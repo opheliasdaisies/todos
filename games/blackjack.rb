@@ -31,6 +31,10 @@ end
 
 def game
 	hand = []
+	total = initial_move(hand)
+end
+
+def initial_move(hand)
 	deal(hand)
 	deal(hand)
 	total(hand)
