@@ -35,8 +35,13 @@ def shake
 	gets.chomp
 	puts "Ready? Okay! Let's shake the eight ball. Your response is:"
 	puts fortune[rand(fortune.length)]
+	play_again
 end
 
-
+def play_again
+	puts "Would you like to play again? Yes or No?"
+	play_again = gets.chomp
+	play(play_again)
+end
 
 eightball
