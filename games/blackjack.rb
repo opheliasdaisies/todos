@@ -30,16 +30,24 @@ def game_start
 end
 
 def game
-	hand = 0
-	hand = deal(hand)
-	hand = deal(hand)
-	puts "Your hand is currently equal to #{hand}."
+	hand = []
+	deal(hand)
+	deal(hand)
+	total(hand)
 end
 
 def deal(hand)
 	card = rand(1..11)
 	puts "You have been dealt a #{card}."
-	hand += card
+	hand << card
+end
+
+def total(hand)
+	total = 0
+	hand.each do |num|
+		total += num
+	end
+	puts "Your hand is currently equal to #{total}."
 end
 
 blackjack
