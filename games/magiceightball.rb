@@ -25,15 +25,18 @@ def play(response)
 		puts "Okay, no fortune for you."
 	else
 		puts "Sorry, I didn't understand that."
-		eightball
+		eightball()
 	end
 end
 	
 def shake
-	puts "Okay, let's shake the eight ball. Your response is:"
-
+	fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
+	puts "Okay, what's your question?"
+	gets.chomp
+	puts "Ready? Okay! Let's shake the eight ball. Your response is:"
+	puts fortune[rand(fortune.length)]
 end
 
-fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
+
 
 eightball
