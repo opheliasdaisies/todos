@@ -38,6 +38,16 @@ pigeon_data[:lives].each do |place, array|
   end
 end
 
+pigeon_data[:color].each do |color, array|
+  array.each do |name|
+    pigeon_list[name][:color] ||= []
+    if pigeon_list[name][:color].include?(color.to_s)
+    else
+      pigeon_list[name][:color] << color.to_s
+    end
+  end
+end
+
 pigeon_list
 
 # [:male].each do |name|
