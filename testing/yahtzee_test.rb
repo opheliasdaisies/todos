@@ -4,9 +4,6 @@ describe "#roll_dice" do
 	it "returns an array of five random numbers" do
 		expect(roll_dice.length).to eq(5)
 	end
-	it "returns only numbers greater than 0 and less than 7" do
-		expect(roll_dice.each {|i| i > 0 && i < 7})
-	end
 end
 
 describe "#win?" do
