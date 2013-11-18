@@ -5,8 +5,10 @@ def fizzbuzz(num)
 		"fizz"
 	elsif num % 5 == 0
 		"buzz"
-	else 
+	elsif num.is_a?(Numeric) 
 		num
+	else
+		"Sorry, \'#{num}\' is not a number."
 	end
 end
 
