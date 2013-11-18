@@ -8,9 +8,9 @@
 #If the user answers yes, have it give a random message.
 #If the user says no, have it end.
 
-def eightball
+def eightball(options)
 	answer = ask_response
-	play(answer)
+	play(answer, options)
 end
 
 def ask_response
@@ -18,30 +18,31 @@ def ask_response
 	response = gets.chomp
 end
 
-def play(response)
+def play(response, options)
 	if response.downcase == "yes"
-		shake
+		shake(options)
 	elsif response.downcase == "no"
 		puts "Okay, no fortune for you."
 	else
 		puts "Sorry, I didn't understand that."
-		eightball()
+		eightball(options)
 	end
 end
 	
-def shake
-	fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
+def shake(options)
 	puts "Okay, what's your question?"
 	gets.chomp
 	puts "Ready? Okay! Let's shake the eight ball. Your response is:"
-	puts fortune[rand(fortune.length)]
-	play_again
+	puts options[rand(options.length)]
+	play_again(options)
 end
 
-def play_again
+def play_again(options)
 	puts "Would you like to play again? Yes or No?"
 	play_again = gets.chomp
-	play(play_again)
+	play(play_again, options)
 end
 
-eightball
+fortune = ["Yes","No","Maybe","In your dreams!","Absolutely not!", "If you're lucky!"]
+
+eightball(fortune)
