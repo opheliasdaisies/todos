@@ -32,7 +32,11 @@ pigeon_data[:gender].each do |gender, array|
   end
 end
 
-
+pigeon_data[:lives].each do |place, array|
+  array.each do |name|
+    pigeon_list[name][:lives] = place.to_s
+  end
+end
 
 pigeon_list
 
