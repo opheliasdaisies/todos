@@ -34,6 +34,7 @@ def game
 	hand = []
 	total = initial_move(hand)
 	hit_stay(hand)
+	playing
 	if playing == true
 		hit_stay(hand)
 	end
@@ -57,23 +58,36 @@ def total(hand)
 		total += num
 	end
 	puts "Your hand is currently equal to #{total}."
+	total
 end
 
 def hit_stay(hand)
 	puts "Would you like to hit or stay?"
 	response = gets.chomp.downcase
 	if response == "stay"
-		#win_lose
-		#break
+		win_lose(hand)
 	elsif response == "hit"
 		deal(hand)
 		total(hand)
 	else
 		puts "Sorry, I didn't understand."
-		hit_stay
+		hit_stay(hand)
 	end
 end
 
+def win_lose(hand)
+	total = total(hand)
+	if total < 21
+		puts "Sorry, bad luck. You lose."
+		playing = false
+	elsif total == 21
+		puts "Congratulations! You won!"
+		playing = false
+	else
+		puts "Bust!"
+		playing = false
+	end
+end
 
 
 blackjack
