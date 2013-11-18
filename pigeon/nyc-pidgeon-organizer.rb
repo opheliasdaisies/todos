@@ -41,8 +41,7 @@ end
 pigeon_data[:color].each do |color, array|
   array.each do |name|
     pigeon_list[name][:color] ||= []
-    if pigeon_list[name][:color].include?(color.to_s)
-    else
+    if !pigeon_list[name][:color].include?(color.to_s)
       pigeon_list[name][:color] << color.to_s
     end
   end
