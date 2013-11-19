@@ -8,12 +8,12 @@ end
 
 describe "#win?" do
 	it "returns true if all values in the array are equal" do
-		expect(win?([4,4,4,4,4])).to eq(true)
+		expect(win?([4,4,4,4,4])).to be_true
 	end
 	it "returns false if the values in the array are not all equal" do
-		expect(win?([3,4,1,2,4])).to eq(false)
+		expect(win?([3,4,1,2,4])).to be_false
 	end
 	it "returns false if the values in the array are not all equal" do
-		expect(win?([1,1,2,1,1])).to eq(false)
+		expect(win?([1,1,2,1,1])).to be_false
 	end	
 end
