@@ -21,7 +21,20 @@
 def card
 	1 + rand(11)
 end
-	
+
+def hit(answer, total_cards)
+	if answer == "hit"
+		new_card = card 
+		total_cards += new_card
+		hit_puts(answer, new_card, total_cards)
+		total_cards
+	end
+end
+
+def hit_puts(answer, new_card, total_cards)
+	puts "Your new card is #{new_card} and now you have in your hand a total of #{total_cards}"
+	"Your new card is #{new_card} and now you have in your hand a total of #{total_cards}"
+end
 
 def blackjack
 	puts "This is blackjack."
@@ -31,15 +44,9 @@ def blackjack
 	puts "Your cards are #{card1} and #{card2}. It gives you the total of #{total_cards}."
 
 	while total_cards < 21
-			puts "Do you want to hit or stay?"
-			answer = gets.chomp
-				if answer == "hit"
-						new_card = card 
-  						total_cards += new_card
-  						puts " Your new card is #{new_card} and now you have in your hand a total of #{total_cards}"
-					else
-					break
-				end
+		puts "Do you want to hit or stay?"
+		answer = gets.chomp
+		total_cards = hit(answer, total_cards)
 	end
 
 	if 	total_cards > 21
@@ -51,5 +58,3 @@ def blackjack
 	end
 
 end
-
-  		
