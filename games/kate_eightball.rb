@@ -5,6 +5,10 @@ end
 def hit?(an_array, index)
   puts "Would you like to hit or stay? (h or s)"
   hit_or_not = gets.chomp
+  hit_stay(an_array, index, hit_or_not)
+end
+
+def hit_stay(an_array, index, hit_or_not)
   if hit_or_not == "s"
     puts "Cool."
     an_array << 0
@@ -18,18 +22,18 @@ def hit?(an_array, index)
   end
 end
 
-# puts "Welcome to Blackjack."
-# cards = [ rand(1..11), rand(1..11)]
-# num_cards = 2
-# puts "Your two cards are #{cards[0]} and #{cards[1]}."
-# puts "Your total is #{total(cards)}."
-# until (cards.include? 0) || (total(cards) >= 21)
-#   hit?(cards, num_cards)
-#   num_cards += 1
-# end
+puts "Welcome to Blackjack."
+cards = [ rand(1..11), rand(1..11)]
+num_cards = 2
+puts "Your two cards are #{cards[0]} and #{cards[1]}."
+puts "Your total is #{total(cards)}."
+until (cards.include? 0) || (total(cards) >= 21)
+  hit?(cards, num_cards)
+  num_cards += 1
+end
 
-# if total(cards) == 21
-#   puts "You win!"
-# else
-#   puts "You lose."
-# end
+if total(cards) == 21
+  puts "You win!"
+else
+  puts "You lose."
+end
