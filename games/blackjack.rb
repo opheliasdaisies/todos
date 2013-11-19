@@ -33,8 +33,7 @@ def game
 	playing = true
 	hand = []
 	total = initial_move(hand)
-	hit_stay(hand)
-	playing
+	playing = hit_stay(hand)
 	if playing == true
 		hit_stay(hand)
 	end
@@ -69,6 +68,7 @@ def hit_stay(hand)
 	elsif response == "hit"
 		deal(hand)
 		total(hand)
+		playing = true
 	else
 		puts "Sorry, I didn't understand."
 		hit_stay(hand)
