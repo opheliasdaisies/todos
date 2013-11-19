@@ -52,5 +52,4 @@ def blackjack
 
 end
 
-blackjack
   		
