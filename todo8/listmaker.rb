@@ -7,3 +7,9 @@
 # called on and appends a number, a period, and a space to each element.
  
 # e.g make_list(["ich", "ni", "san"]) #=> ["1. ich", "2. ni", "3. san"]
+
+def make_list(array)
+	array.collect do |str|
+		"#{array.index(str) +1}. #{str}"
+	end
+end
