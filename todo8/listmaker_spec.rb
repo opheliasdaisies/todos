@@ -11,6 +11,6 @@ describe "#make_list" do
 		expect(make_list([0,1,2])).to eq(["1. 0", "2. 1", "3. 2"])
 	end
 	it "should return nested ordered arrays of strings if a nested array is passed in" do
-		expect(make_list([[4, "pizza"],"oak",["loop"]])).to eq(["1. ['1. 4', '2. pizza']", "2. oak", "3. ['1. loop']"])
+		expect(make_list([[4, "pizza"],"oak",["loop"]])).to eq(["1. [\"1. 4\", \"2. pizza\"]", "2. oak", "3. [\"1. loop\"]"])
 	end
 end
