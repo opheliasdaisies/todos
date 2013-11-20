@@ -12,8 +12,7 @@ def make_list(array)
 	array.each_with_index.map do |val, index|
 		if val.is_a?(Array)
 			make_list(val)
-		else
-			"#{index + 1}. #{val}"
 		end
+		"#{index + 1}. #{val}"
 	end
 end
