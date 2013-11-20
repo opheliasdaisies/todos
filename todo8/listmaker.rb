@@ -9,13 +9,13 @@
 # e.g make_list(["ich", "ni", "san"]) #=> ["1. ich", "2. ni", "3. san"]
 
 def make_list(array)
-	array.collect do |val|
+	array.each_with_index.map do |val, index|
 		if val.is_a?(Array)
 			if val.length > 1
 				make_list(val)
 			end
 		else
-			"#{array.index(val) + 1}. #{val}"
+			"#{index + 1}. #{val}"
 		end
 	end
 end
