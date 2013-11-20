@@ -11,9 +11,7 @@
 def make_list(array)
 	array.each_with_index.map do |val, index|
 		if val.is_a?(Array)
-			if val.length > 1
-				make_list(val)
-			end
+			make_list(val)
 		else
 			"#{index + 1}. #{val}"
 		end
