@@ -1,3 +1,16 @@
 require "./deli"
 
-describe Deli, "#"
+describe Deli, "#take_a_number" do
+	it "should take a customer name, add a number before the name, and add them to the end of the line array" do
+		expect(["1. Steve", "2. Blake"].take_a_number("Ashley")).to eq(["1. Steve", "2. Blake", "3. Ashley"])
+	end
+	it "should take a customer name, add a number before the name, and add them to the end of the line array" do
+		expect([].take_a_number("Ashley")).to eq(["1. Ashley"])
+	end
+end
+
+describe Deli, "#now_serving" do
+	it "should remove the customer who is first in line and return their name" do
+		expect(["1. Steve", "2. Blake", "3. Ashley"]).to eq("Steve")
+	end
+end
