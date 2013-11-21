@@ -6,8 +6,13 @@ class Deli
 	end
 
 	def take_a_number(name)
-		num = line.length + 1
-		line << "#{num}. #{name}"
+		if line[0].nil?
+			line << "1. #{name}"
+		else
+			last_num_str = line.last.split(".")[0]
+			ticket = last_num_str.to_i + 1
+			line << "#{ticket}. #{name}"
+		end
 	end
 
 	def now_serving
