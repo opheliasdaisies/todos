@@ -1,0 +1,3 @@
+require "./deli"
+
+describe Deli, "#"
