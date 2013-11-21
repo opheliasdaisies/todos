@@ -9,4 +9,9 @@ class Deli
 		num = line.length + 1
 		line << "#{num}. #{name}"
 	end
+
+	def now_serving
+		name = line.shift.split(" ")
+		name[1]
+	end
 end
