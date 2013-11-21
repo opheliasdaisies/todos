@@ -4,6 +4,9 @@ class Deli
 	def initialize(line)
 		@line = line
 	end
-	
-	#method here
+
+	def take_a_number(name)
+		num = line.length + 1
+		line << "#{num}. #{name}"
+	end
 end
