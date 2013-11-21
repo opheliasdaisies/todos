@@ -11,6 +11,6 @@ end
 
 describe Deli, "#now_serving" do
 	it "should remove the customer who is first in line and return their name" do
-		expect(Deli.new(["1. Steve", "2. Blake", "3. Ashley"])).to eq("Steve")
+		expect(Deli.new(["1. Steve", "2. Blake", "3. Ashley"]).now_serving).to eq("Steve")
 	end
 end
