@@ -1,5 +1,9 @@
 class Deli
-	#initialize here
+	attr_accessor :line
 
+	def initialize(line)
+		@line = line
+	end
+	
 	#method here
 end
