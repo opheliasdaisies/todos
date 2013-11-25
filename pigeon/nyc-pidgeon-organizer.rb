@@ -9,7 +9,7 @@ pigeon_data = {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
     :grey => ["Theo", "Peter Jr.", "Ms .K"],
     :white => ["Queenie", "Andrew", "Ms .K", "Alex"],
-    :brown => ["Queenie", "Alex"]
+    :brown => ["Queenie", "Alex", "Theo"]
   },
   :gender => {
     :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
@@ -29,7 +29,9 @@ pigeon_data.each do |category, hash|
     array.each do |name|
       pigeon_list[name] = {} unless pigeon_list[name]
       if pigeon_list[name][category]
-        pigeon_list[name][category] = [pigeon_list[name][category]]
+        if pigeon_list[name][category].class != Array
+          pigeon_list[name][category] = [pigeon_list[name][category]]
+        end
         pigeon_list[name][category] << item.to_s
       else
         pigeon_list[name][category] = item.to_s
