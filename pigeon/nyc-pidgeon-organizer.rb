@@ -24,37 +24,19 @@ pigeon_data = {
 }
 
 pigeon_list = {}
-
-pigeon_data[:gender].each do |gender, array|
-  array.each do |name|
-    pigeon_list[name] = {}
-    pigeon_list[name][:gender] = gender.to_s
-  end
-end
-
-pigeon_data[:lives].each do |place, array|
-  array.each do |name|
-    pigeon_list[name][:lives] = place.to_s
-  end
-end
-
-pigeon_data[:color].each do |color, array|
-  array.each do |name|
-    pigeon_list[name][:color] ||= []
-    if !pigeon_list[name][:color].include?(color.to_s)
-      pigeon_list[name][:color] << color.to_s
+pigeon_data.each do |category, hash|
+  hash.each do |item, array|
+    array.each do |name|
+      pigeon_list[name] = {} unless pigeon_list[name]
+      if pigeon_list[name][category]
+        pigeon_list[name][category] = [pigeon_list[name][category]]
+        pigeon_list[name][category] << item.to_s
+      else
+        pigeon_list[name][category] = item.to_s
+      end
     end
   end
 end
-
-pigeon_list
-
-# [:male].each do |name|
-#   pigeon_list[name] = {:gender => "male"}
-# end
-# pigeon_data[:gender][:female].each do |name|
-#   pigeon_list[name] = {:gender => "female"}
-# end
 
 puts pigeon_list
  
