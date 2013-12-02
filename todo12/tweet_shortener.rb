@@ -2,24 +2,28 @@ tweets = ["Hey guys, can anyone teach me how to be cool? I really want to be the
 
 def tweet_shortener(tweet_string)
 	new_tweet = []
-	tweet_string.split(" ").each do |word|
-		if word.downcase == "to" || word.downcase == "two" || word.downcase == "too"
-				new_tweet << "2"
-		elsif word.downcase == "for" || word.downcase == "four"
-			new_tweet << "4"
-		elsif word.downcase == "be"
-			new_tweet << "b"
-		elsif word.downcase == "you"
-			new_tweet << "u"
-		elsif word.downcase == "at"
-			new_tweet << "@"
-		elsif word.downcase == "and"
-			new_tweet << "&"
-		else
-			new_tweet << word
+	if tweet_string.length > 140
+		tweet_string.split(" ").each do |word|
+			if word.downcase == "to" || word.downcase == "two" || word.downcase == "too"
+					new_tweet << "2"
+			elsif word.downcase == "for" || word.downcase == "four"
+				new_tweet << "4"
+			elsif word.downcase == "be"
+				new_tweet << "b"
+			elsif word.downcase == "you"
+				new_tweet << "u"
+			elsif word.downcase == "at"
+				new_tweet << "@"
+			elsif word.downcase == "and"
+				new_tweet << "&"
+			else
+				new_tweet << word
+			end
 		end
+		new_tweet.join(" ")
+	else
+		tweet_string
 	end
-	new_tweet.join(" ")
 end
 
 def bulk_tweet_shortener(tweet_array)
