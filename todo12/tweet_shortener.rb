@@ -20,7 +20,15 @@ def tweet_shortener(tweet_string)
 				new_tweet << word
 			end
 		end
-		new_tweet.join(" ")
+		new_tweet = new_tweet.join(" ")
+		if new_tweet.length > 140
+			short = new_tweet[0, 137]
+			shorter_tweet = short + "..."
+			new_tweet = shorter_tweet
+		else
+			new_tweet
+		end
+		new_tweet
 	else
 		tweet_string
 	end
@@ -33,5 +41,3 @@ def bulk_tweet_shortener(tweet_array)
 	end
 	shortened_tweets
 end
-
-puts bulk_tweet_shortener(tweets)
