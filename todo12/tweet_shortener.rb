@@ -23,9 +23,10 @@ def tweet_shortener(tweet_string)
 end
 
 def bulk_tweet_shortener(tweet_array)
+	shortened_tweets = []
 	tweet_array.each do |tweet|
 		new_tweet = []
-		tweet_array.split(" ").each do |word|
+		tweet.split(" ").each do |word|
 			if word.downcase == "to" || word.downcase == "two" || word.downcase == "too"
 				new_tweet << "2"
 			elsif word.downcase == "for" || word.downcase == "four"
@@ -42,8 +43,9 @@ def bulk_tweet_shortener(tweet_array)
 				new_tweet << word
 			end
 		end
-		new_tweet.join(" ")
+		shortened_tweets << new_tweet.join(" ")
 	end
+	shortened_tweets
 end
 
-bulk_tweet_shortener(tweets)
+puts bulk_tweet_shortener(tweets)
