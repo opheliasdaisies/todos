@@ -25,25 +25,7 @@ end
 def bulk_tweet_shortener(tweet_array)
 	shortened_tweets = []
 	tweet_array.each do |tweet|
-		new_tweet = []
-		tweet.split(" ").each do |word|
-			if word.downcase == "to" || word.downcase == "two" || word.downcase == "too"
-				new_tweet << "2"
-			elsif word.downcase == "for" || word.downcase == "four"
-				new_tweet << "4"
-			elsif word.downcase == "be"
-				new_tweet << "b"
-			elsif word.downcase == "you"
-				new_tweet << "u"
-			elsif word.downcase == "at"
-				new_tweet << "@"
-			elsif word.downcase == "and"
-				new_tweet << "&"
-			else
-				new_tweet << word
-			end
-		end
-		shortened_tweets << new_tweet.join(" ")
+		shortened_tweets << tweet_shortener(tweet)
 	end
 	shortened_tweets
 end
