@@ -1,4 +1,5 @@
-require_relative './jukebox.rb'
+require_relative './jukebox'
+require_relative './song_library'
 
 def run
   puts "Welcome to Ruby Console Jukebox!"
