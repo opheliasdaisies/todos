@@ -26,7 +26,7 @@ def pay_by(order)
   order.compute_cost
   order.compute_shipping
   order.compute_tax
-  yield
+  yield order
   order.ship_goods
 end
 
