@@ -3,7 +3,11 @@
 class Array
 
   def uniq
-    # code goes here
+    new_array = []
+    self.each do |item|
+      new_array.include?(item) ? new_array : new_array << item
+    end
+    new_array
   end
 
 end
