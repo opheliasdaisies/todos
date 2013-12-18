@@ -8,7 +8,11 @@ module IsItToday
     get "/" do
       @dates = Dates.new(10, 30)
       @today = @dates.is_today?
-      @today == true ? erb :yes : erb :no
+      if @today == true
+        erb :yes
+      else
+        erb :no
+      end
     end
 
   end
