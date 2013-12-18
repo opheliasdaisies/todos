@@ -7,6 +7,7 @@ class Dates
   end
 
   def is_today?
+    today_is
     today == birthday ? true : false
   end
 
