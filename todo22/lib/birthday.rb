@@ -1,8 +1,9 @@
-class Birthday
-  attr_reader :birthday, :today
+class Dates
+  attr_reader :birthday
+  attr_accessor :today
 
   def initialize(month, date)
-    @birthday = "#{month}/#{date}"
+    @birthday = "#{month.to_s}/#{date.to_s}"
   end
 
   def is_today?
