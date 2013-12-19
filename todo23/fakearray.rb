@@ -35,7 +35,7 @@ class FakeArray
   end
 
   def first
-    
+    a
   end
 
   def []()
