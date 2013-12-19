@@ -38,8 +38,15 @@ class FakeArray
     a
   end
 
-  def []()
-    
+  def [](index)
+    case index
+    when 0
+      a
+    when 1
+      b
+    when 2
+      c
+    end    
   end
 
 end
