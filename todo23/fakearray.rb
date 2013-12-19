@@ -20,33 +20,24 @@
 # Note: I've intentionally omitted a step here where you'd have to somehow tell your class that were using an array of 1,2,3
 
 class FakeArray
-  attr_accessor :a, :b, :c
+  attr_accessor :items
 
-  def initialize(elem1, elem2, elem3)
-    @a = elem1
-    @b = elem2
-    @c = elem3
+  def initialize(array)
+    @items = array
   end
 
   def each
-    yield a
-    yield b
-    yield c   
+    items.each do |item|
+      yield item if block_given?
+    end
   end
 
   def first
-    a
+    items[0]
   end
 
   def [](index)
-    case index
-    when 0
-      a
-    when 1
-      b
-    when 2
-      c
-    end    
+    items[index]
   end
 
 end
