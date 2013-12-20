@@ -37,8 +37,8 @@ class FakeHashWrapper
 
   def all_keys
     keys = []
-    data.each { |key, value| keys << key }
-    keys.sort.reverse
+    data.each { |key, value| keys << key.to_s }
+    keys.sort
   end
 
 end
