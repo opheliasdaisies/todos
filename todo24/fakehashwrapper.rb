@@ -19,11 +19,11 @@ class FakeHashWrapper
   end
 
   def [](key)
-    data[key.to_s]
-    data[key.to_sym]
+    data[key.to_s] || data[key.to_sym]
   end
 
-  def []=](key, value)
+  def []=(key, value)
+    data.each { |k, v| return data[k] = value if k == key.to_s || k == key.to_sym }
     data[key] = value
   end
 
