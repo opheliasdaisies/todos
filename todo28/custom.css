@@ -8,3 +8,9 @@ body {
   position: relative;
   bottom: .2em;
 }
+
+footer {
+  margin-top: 30px;
+  border-top: 1px #CCC solid;
+  padding-top: 40px;
+}
