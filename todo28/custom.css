@@ -1,3 +1,10 @@
 body {
   padding-top: 70px;
 }
+
+.btn-default:after {
+  content: " >>";
+  font-size: .7em;
+  position: relative;
+  bottom: .2em;
+}
