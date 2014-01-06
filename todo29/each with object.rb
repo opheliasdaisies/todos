@@ -3,7 +3,9 @@
 
 # Code:
 def even_sum(arr)
-  arr.each_with_object___
+  arr.each_with_object([]) do |word, a|
+    a << word.reverse if word.length % 2 == 0
+  end
 end
 
-# even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
+even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
