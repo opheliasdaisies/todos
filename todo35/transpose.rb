@@ -2,7 +2,20 @@
 
 class Array
   def my_transpose
-    ___
+    new_array = []
+    unless self.length == 0 
+      self[0].length.times { new_array << [] }
+    end
+    arr_index = 0
+    self.each do |nested|
+      item_index = 0
+      nested.each do |item|
+        new_array[item_index][arr_index] = item
+        item_index += 1
+      end
+      arr_index += 1
+    end
+    new_array
   end
 end
 
